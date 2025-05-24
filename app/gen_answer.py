@@ -5,6 +5,7 @@ import json
 # Pegando a secret key do OpenAI
 # A função get_secret é responsável por buscar a chave secreta do OpenAI no AWS Secrets Manager
 secrets = get_secret("openai/api_key")
+
 # Inicializando o cliente OpenAI com a chave secreta
 client = OpenAI(api_key=secrets["OPENAI_API_KEY"])
 
